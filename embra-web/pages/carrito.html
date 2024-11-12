@@ -14,6 +14,8 @@
     <header>
         <div>
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
+              
+
 
                 <div class="container-fluid">
                     <a class="navbar-brand" href="../index.html">
@@ -39,8 +41,10 @@
                                 </li>
                                 <nav class="navbar bg-body-tertiary">
                                     <div class="container">
-                                        <a class="navbar-brand" href="./carrito.html">
+                                        <a class="navbar-brand" href="../pages/carrito.html">
                                             <img src="../imagenes/carritopng.png" alt="carrito" width="30" height="30">
+                                            <!-- Aquí se mostrará el contador de productos en el carrito -->
+                                            <span id="carrito-count">0</span>
                                         </a>
                                     </div>
                                 </nav>
@@ -55,29 +59,28 @@
     <main>
 
         <section>
-
             <div>
+                <!-- Aquí comienza el contenedor del carrito -->
                 <div class="card mb-3">
                     <img src="../imagenes/carritopng.png" class="card-img-top" alt="carrito">
                     <div class="card-body">
                         <h5 class="card-title">Carrito</h5>
-                        <p class="card-text">Tu carrito de compras está vacío</p>
-                        <p class="card-text"><small class="text-body-secondary">Agregá productos para armar tu carrito</small></p>
+                        
+                        <!-- Este div mostrará los productos agregados -->
+                        <div id="productos-carrito">
+                            <!-- Los productos se agregarán dinámicamente aquí -->
+                        </div>
+                        
+                        <!-- Este mensaje será mostrado si el carrito está vacío -->
+                        <p id="mensaje-vacio" class="card-text"><small class="text-body-secondary">Agregá productos para armar tu carrito</small></p>
+                        
                         <a href="../index.html" class="btn btn-primary">Continuar comprando</a>
+                        <a href="./finalizarcompra.html" class="btn btn-primary">Finalizar compra</a>
                     </div>
                 </div>
-
             </div>
-
-
-
-
-
-
-
-
-
         </section>
+       
 
 
 
@@ -90,6 +93,49 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+        <script>
+            // Función para cargar los productos en el carrito
+            document.addEventListener("DOMContentLoaded", function() {
+                let carrito = JSON.parse(localStorage.getItem("carrito"));
+                let productosCarrito = document.getElementById("productos-carrito");
+                let mensajeVacio = document.getElementById("mensaje-vacio");
+            
+                // Si hay productos en el carrito, mostramos cada uno
+                if (carrito && carrito.length > 0) {
+                    mensajeVacio.style.display = "none"; // Ocultamos el mensaje de carrito vacío
+                    carrito.forEach((producto) => {
+                        // Crear un nuevo elemento para cada producto
+                        let productoDiv = document.createElement("div");
+                        productoDiv.classList.add("card", "mb-3");
+            
+                        productoDiv.innerHTML = `
+                            <div class="card-body">
+                                <h5 class="card-title">${producto.nombre}</h5>
+                                <p class="card-text">Precio: $${producto.precio}</p>
+                                <button class="btn btn-danger" onclick="eliminarDelCarrito('${producto.nombre}')">Eliminar</button>
+                            </div>
+                        `;
+            
+                        // Agregar el producto al contenedor del carrito
+                        productosCarrito.appendChild(productoDiv);
+                    });
+                } else {
+                    // Si no hay productos, mostramos el mensaje de carrito vacío
+                    mensajeVacio.style.display = "block";
+                }
+            });
+            
+            // Función para eliminar un producto del carrito
+            function eliminarDelCarrito(nombreProducto) {
+                let carrito = JSON.parse(localStorage.getItem("carrito"));
+                carrito = carrito.filter(producto => producto.nombre !== nombreProducto);
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+            
+                // Recargar la página para reflejar los cambios
+                location.reload();
+            }
+            </script>
+            
 
 </body>
 <footer>

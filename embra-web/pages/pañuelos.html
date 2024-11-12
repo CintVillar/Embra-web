@@ -39,11 +39,13 @@
                                 </li>
                                 <nav class="navbar bg-body-tertiary">
                                     <div class="container">
-                                      <a class="navbar-brand" href="./carrito.html">
-                                        <img src="../imagenes/carritopng.png" alt="carrito" width="30" height="30">
-                                      </a>
+                                        <a class="navbar-brand" href="../pages/carrito.html">
+                                            <img src="../imagenes/carritopng.png" alt="carrito" width="30" height="30">
+                                            <!-- Aquí se mostrará el contador de productos en el carrito -->
+                                            <span id="carrito-count">0</span>
+                                        </a>
                                     </div>
-                                  </nav>
+                                </nav>
 
                             </ul>
                         </div>
@@ -58,39 +60,51 @@
 
             <div>
                 <div class="card" style="width: 18rem;">
-                    <a class="" href="./pañuelo estampaso lunares.html">
+
                     <img src="../imagenes/pañuelos/pañuelo seda estamapado lunares.jpg" class="card-img-top"
                         alt="pañueloestampadolunares">
-                       
+
                     <div class="card-body">
                         <h5 class="img">Pañuelo Estampado</h5>
                         <h6>Lunares</h6>
                         <h4 class="new-price">$2900</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary"
+                            onclick="agregarAlCarrito('Pañuelo Estampado Lunares', 2900); actualizarContadorCarrito()">Agregar
+                            al carrito</a>
+
                     </div>
                 </div>
             </div>
 
             <div>
                 <div class="card" style="width: 18rem;">
-                    <img src="../imagenes/pañuelos/pañuelo seda estampado negro.jpg" class="card-img-top" alt="pañuelonegro">
+                    <img src="../imagenes/pañuelos/pañuelo seda estampado negro.jpg" class="card-img-top"
+                        alt="pañuelonegro">
                     <div class="card-body">
                         <h5 class="img">Pañuelo Estampado</h5>
                         <h6>Negro</h6>
-                      
+
                         <h4 class="new-price">$2900</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary"
+                            onclick="agregarAlCarrito('Pañuelo Estampado Negro', 2900); actualizarContadorCarrito()">Agregar
+                            al carrito</a>
+
                     </div>
                 </div>
             </div>
+
             <div>
                 <div class="card" style="width: 18rem;">
-                    <img src="../imagenes/pañuelos/pañuelo seda estampado rojo.jpg" class="card-img-top" alt="pañuelorojo">
+                    <img src="../imagenes/pañuelos/pañuelo seda estampado rojo.jpg" class="card-img-top"
+                        alt="pañuelorojo">
                     <div class="card-body">
                         <h5 class="img">Pañuelo Estampado</h5>
-                        <h6>Rojo</h6>                        
+                        <h6>Rojo</h6>
                         <h4 class="new-price">$2900</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary"
+                            onclick="agregarAlCarrito('Pañuelo Estampado Rojo', 2900); actualizarContadorCarrito()">Agregar
+                            al carrito</a>
+
                     </div>
                 </div>
             </div>
@@ -98,24 +112,32 @@
             <div>
 
                 <div class="card" style="width: 18rem;">
-                    <img src="../imagenes/pañuelos/pañuelo seda estampado sebra.jpg" class="card-img-top" alt="pañuelosebra">
+                    <img src="../imagenes/pañuelos/pañuelo seda estampado sebra.jpg" class="card-img-top"
+                        alt="pañuelosebra">
                     <div class="card-body">
                         <h5 class="img">Pañuelo Estampado</h5>
-                        <h6>Sebra</h6>                       
+                        <h6>Sebra</h6>
                         <h4 class="new-price">$2900</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary"
+                            onclick="agregarAlCarrito('Pañuelo Estampado Sebra', 2900); actualizarContadorCarrito()">Agregar
+                            al carrito</a>
+
                     </div>
                 </div>
             </div>
 
             <div>
                 <div class="card" style="width: 18rem;">
-                    <img src="../imagenes/pañuelos/pañuelo seda grande animal print.jpg" class="card-img-top" alt="pañuelogrande">
+                    <img src="../imagenes/pañuelos/pañuelo seda grande animal print.jpg" class="card-img-top"
+                        alt="pañuelogrande">
                     <div class="card-body">
                         <h5 class="img">Pañuelo Seda Grande </h5>
                         <h6>Animal print</h6>
                         <h4 class="new-price">$5800</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary"
+                            onclick="agregarAlCarrito('Pañuelo Ceda Grande', 5800); actualizarContadorCarrito()">Agregar
+                            al carrito</a>
+
                     </div>
                 </div>
             </div>
@@ -123,34 +145,46 @@
 
             <div>
                 <div class="card" style="width: 18rem;">
-                    <img src="../imagenes/pañuelos/pañuelo seda grande azul francia.jpg" class="card-img-top" alt="pañuelogrande">
+                    <img src="../imagenes/pañuelos/pañuelo seda grande azul francia.jpg" class="card-img-top"
+                        alt="pañuelogrande">
                     <div class="card-body">
-                        <h5 class="img">Bufanda Lisa</h5>
-                        <h6>Roja</h6>
+                        <h5 class="img">Pañuelo Seda Grande</h5>
+                        <h6>Azul</h6>
                         <h4 class="new-price">$5800</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary"
+                            onclick="agregarAlCarrito('Pañuelo Seda Grande Azul', 5800); actualizarContadorCarrito()">Agregar
+                            al carrito</a>
+
                     </div>
                 </div>
             </div>
             <div>
                 <div class="card" style="width: 18rem;">
-                    <img src="../imagenes/pañuelos/pañuelo seda grande blanco rosa.jpg" class="card-img-top" alt="pañuelogrande">
+                    <img src="../imagenes/pañuelos/pañuelo seda grande blanco rosa.jpg" class="card-img-top"
+                        alt="pañuelogrande">
                     <div class="card-body">
                         <h5 class="img">Pañuelo Seda Grande</h5>
                         <h6>Blanco Rosa</h6>
                         <h4 class="new-price">$5800</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary"
+                            onclick="agregarAlCarrito('Pañuelo Seda Grande Blanco', 5800); actualizarContadorCarrito()">Agregar
+                            al carrito</a>
+
                     </div>
                 </div>
             </div>
             <div>
                 <div class="card" style="width: 18rem;">
-                    <img src="../imagenes/pañuelos/pañuelo seda grande fucsia.jpg" class="card-img-top" alt="pañuelogrande">
+                    <img src="../imagenes/pañuelos/pañuelo seda grande fucsia.jpg" class="card-img-top"
+                        alt="pañuelogrande">
                     <div class="card-body">
                         <h5 class="img">Pañuelo Seda Grande</h5>
                         <h6>Fucsia</h6>
                         <h4 class="new-price">$5800</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary"
+                            onclick="agregarAlCarrito('Pañuelo Seda Grande Fucsia', 5800); actualizarContadorCarrito()">Agregar
+                            al carrito</a>
+
                     </div>
                 </div>
             </div>
@@ -161,7 +195,10 @@
                         <h5 class="img">Maxi Pañuelo</h5>
                         <h6>90x90</h6>
                         <h4 class="new-price">$4040</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary"
+                            onclick="agregarAlCarrito('Maxi pañuelo', 4040); actualizarContadorCarrito()">Agregar al
+                            carrito</a>
+
                     </div>
                 </div>
             </div>
@@ -172,7 +209,10 @@
                         <h5 class="img">Pañuelo Rayas</h5>
                         <h6>Azul</h6>
                         <h4 class="new-price">$1250</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary"
+                            onclick="agregarAlCarrito('Pañuelo rayas Azul', 1250); actualizarContadorCarrito()">Agregar
+                            al carrito</a>
+
                     </div>
                 </div>
             </div>
@@ -183,25 +223,15 @@
                         <h5 class="img">Pañuelo Rayas</h5>
                         <h6>Rojo</h6>
                         <h4 class="new-price">$1250</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary"
+                            onclick="agregarAlCarrito('Pañuelo rayas Rojo', 1250); actualizarContadorCarrito()">Agregar
+                            al carrito</a>
+
                     </div>
                 </div>
             </div>
-           
-           
-           
-          
-
-
-
-
-
-
 
         </section>
-
-
-
 
     </main>
 
@@ -211,13 +241,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
 
 </body>
 <footer>
     <div class="footer-content">
         <div class="contact">
             <p>ESCRIBINOS</p>
-            <a href="pages/escribinos.html">
+            <a href="./escribinos.html">
                 <img src="../imagenes/img sobre.png" alt="Escribinos" class="contact-icon">
             </a>
         </div>

@@ -6,12 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embra-web</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-
-
-
 
 <body>
     <header>
@@ -19,7 +15,7 @@
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
 
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="../index.html">
                         <img src="../imagenes/logo color.jpg" alt="Logo" width="300" height="300"
                             class="d-inline-block align-text-top">
                         <a href="../index.html"></a>
@@ -32,21 +28,23 @@
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./pañuelos.html">Pañuelos</a>
+                                    <a class="nav-link" href="../pages/pañuelos.html">Pañuelos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./pages/bufandas.html">Bufandas</a>
+                                    <a class="nav-link" href="../pages/bufandas.html">Bufandas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./pages/pashminas.html">Pashminas</a>
+                                    <a class="nav-link" href="../pages/pashminas.html">Pashminas</a>
                                 </li>
                                 <nav class="navbar bg-body-tertiary">
                                     <div class="container">
-                                      <a class="navbar-brand" href="./pages/carrito.html">
-                                        <img src="../imagenes/carritopng.png" alt="carrito" width="30" height="30">
-                                      </a>
+                                        <a class="navbar-brand" href="../pages/carrito.html">
+                                            <img src="../imagenes/carritopng.png" alt="carrito" width="30" height="30">
+                                            <!-- Aquí se mostrará el contador de productos en el carrito -->
+                                            <span id="carrito-count">0</span>
+                                        </a>
                                     </div>
-                                  </nav>
+                                </nav>
 
                             </ul>
                         </div>
@@ -55,62 +53,39 @@
         </div>
 
     </header>
+    
     <main>
+        <section>
+            <h1 class="text-center">Escribinos</h1>
+            <p class="text-center">¿Tienes alguna consulta o comentario? ¡Nos encantaría saber de ti! Completa el siguiente formulario y nos pondremos en contacto pronto.</p>
+
+            <form id="formulario-contacto" method="POST" action="enviar_consulta.php" class="container mt-4">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Tu Mensaje</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar Consulta</button>
+            </form>
+        </section>
+    </main>
+
     
 
-   
-    <h1>
-        Dejanos tu mensaje
-    </h1>
-    <article>
-        <form action="">
-            <div>
-                <label>Email</label>
-                <input type="email" placeholder="hola@ejemplo.com">
-
-            </div>
-            <br>
-            <div>
-                <label>Mensaje</label>
-                <textarea cols="30" rows="10"></textarea>
-            </div>
-            <br>
-            <button type="submit">Enviar</button>
-        </form>
-
-    </article>
-</main>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
+
 <footer>
-    <div class="footer-content">
-        <div class="contact">
-            <p>ESCRIBINOS</p>
-            <a href="pages/escribinos.html">
-                <img src="../imagenes/img sobre.png" alt="Escribinos" class="contact-icon">
-            </a>
-        </div>
-        <div class="newsletter">
-            <h2>NEWSLETTER</h2>
-            <p>Suscribite para recibir promociones y descuentos exclusivos</p>
-            <input type="email" placeholder="Su correo electrónico">
-            <button class="subscribe-button">SUSCRIBIRSE</button>
-        </div>
-        <div class="redes">
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="../imagenes/vecteezy_instagram-logo-png-instagram-icon-transparent_18930415.png"
-                    alt="Instagram" class="social-icon">
-            </a>
-            <a href="https://www.tiktok.com" target="_blank">
-                <img src="../imagenes/vecteezy_tiktok-logo-png-tikok-icon-transparent-png-tikok-app-logo-png_18930463.png"
-                    alt="TikTok" class="social-icon">
-            </a>
-        </div>
-    </div>
+    <p>&copy; 2024 E.MBRA</p>
 </footer>
+
 </html>

@@ -311,4 +311,157 @@ footer {
     transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
 }
 
+/* Estilos generales para el body */
+body {
+    background-color: #e5e6c9;
+    font-family: 'Arial', sans-serif;
+}
 
+/* Mejorar la apariencia del formulario */
+form {
+    background-color: #fff; /* Fondo blanco para el formulario */
+    padding: 20px; /* Espaciado interior */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+form .form-label {
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Estilos para el botón de enviar */
+.btn-primary {
+    background-color: #0d0f0e !important;
+    border-color: #0d0f0e !important;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background-color: #d7d7b8 !important;
+    border-color: #d7d7b8 !important;
+}
+
+/* Alinear el título y párrafo en el main */
+main h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+main p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Mejorar los márgenes en la página */
+section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact p {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.contact-icon {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+/* Estilo para el input del newsletter */
+.newsletter input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para los iconos sociales */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos generales */
+.product-details {
+    padding: 20px;
+}
+
+.product-details .thumbnail-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.product-details .thumbnail-images img {
+    width: 80px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.product-details .thumbnail-images img:hover {
+    transform: scale(1.1);
+}
+
+.product-details h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.product-details .price {
+    font-size: 1.5em;
+    color: #d7d7b8;
+    margin-bottom: 20px;
+}
+
+.product-details .product-features {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.product-details .product-features li {
+    margin-bottom: 10px;
+}
+
+.product-details button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    width: 100%;
+}
+
+.product-details button.btn-primary {
+    background-color: #0d0f0e;
+    border-color: #0d0f0e;
+}
+
+.product-details button.btn-secondary {
+    background-color: #d7d7b8;
+    border-color: #d7d7b8;
+}

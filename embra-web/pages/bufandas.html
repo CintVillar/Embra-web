@@ -39,11 +39,13 @@
                                 </li>
                                 <nav class="navbar bg-body-tertiary">
                                     <div class="container">
-                                      <a class="navbar-brand" href="./carrito.html">
-                                        <img src="../imagenes/carritopng.png" alt="carrito" width="30" height="30">
-                                      </a>
+                                        <a class="navbar-brand" href="../pages/carrito.html">
+                                            <img src="../imagenes/carritopng.png" alt="carrito" width="30" height="30">
+                                            <!-- Aquí se mostrará el contador de productos en el carrito -->
+                                            <span id="carrito-count">0</span>
+                                        </a>
                                     </div>
-                                  </nav>
+                                </nav>
 
                             </ul>
                         </div>
@@ -64,20 +66,23 @@
                         <h6>¡Última disponible!</h6>
                         <p class="old-price">$17220</p>
                         <h4 class="new-price">$14590</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary" onclick="agregarAlCarrito('Bufanda escosesa invierno', 14590); actualizarContadorCarrito()">Agregar al carrito</a>
+
                     </div>
                 </div>
             </div>
 
             <div>
                 <div class="card" style="width: 18rem;">
-                    <img src="../imagenes/bufandas/bufanda lisa azul francia.jpg" class="card-img-top" alt="bufandonzigzag">
+                    <img src="../imagenes/bufandas/bufanda lisa azul francia.jpg" class="card-img-top"
+                        alt="bufandonzigzag">
                     <div class="card-body">
                         <h5 class="img">Bufandon Liso Tejido ZigZag</h5>
                         <h6>Azul Francia</h6>
                         <p class="old-price">$7220</p>
                         <h4 class="new-price">$4590</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary" onclick="agregarAlCarrito('Bufandon Liso', 4590); actualizarContadorCarrito()">Agregar al carrito</a>
+
                     </div>
                 </div>
             </div>
@@ -89,7 +94,8 @@
                         <h6>Gris</h6>
                         <h6>Stock disponible</h6>
                         <h4 class="new-price">$4500</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary" onclick="agregarAlCarrito('Bufanda Lisa Gris', 4500); actualizarContadorCarrito()">Agregar al carrito</a>
+
                     </div>
                 </div>
             </div>
@@ -97,13 +103,15 @@
             <div>
 
                 <div class="card" style="width: 18rem;">
-                    <img src="../imagenes/bufandas/bufanda rayada premium.jpg" class="card-img-top" alt="Bufandapremiun">
+                    <img src="../imagenes/bufandas/bufanda rayada premium.jpg" class="card-img-top"
+                        alt="Bufandapremiun">
                     <div class="card-body">
                         <h5 class="img">Bufanda Rayada Premiun</h5>
                         <h6>Camel Gris Marron</h6>
                         <h6>Stock disponible</h6>
                         <h4 class="new-price">$24500</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary" onclick="agregarAlCarrito('Bufanda Rayada', 24500); actualizarContadorCarrito()">Agregar al carrito</a>
+
                     </div>
                 </div>
             </div>
@@ -115,7 +123,8 @@
                         <h5 class="img">Bufanda Lisa </h5>
                         <h6>Azul</h6>
                         <h4 class="new-price">$4690</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary" onclick="agregarAlCarrito('Bufanda lisa Azul', 4690); actualizarContadorCarrito()">Agregar al carrito</a>
+
                     </div>
                 </div>
             </div>
@@ -128,7 +137,8 @@
                         <h5 class="img">Bufanda Lisa</h5>
                         <h6>Roja</h6>
                         <h4 class="new-price">$4500</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary" onclick="agregarAlCarrito('Bufanda lisa Roja', 4500); actualizarContadorCarrito()">Agregar al carrito</a>
+
                     </div>
                 </div>
             </div>
@@ -139,7 +149,8 @@
                         <h5 class="img">Bufanda Lisa</h5>
                         <h6>Rosa</h6>
                         <h4 class="new-price">$4500</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary" onclick="agregarAlCarrito('Bufanda lisa Rosa', 4500); actualizarContadorCarrito()">Agregar al carrito</a>
+
                     </div>
                 </div>
             </div>
@@ -150,7 +161,8 @@
                         <h5 class="img">Bufanda Nube</h5>
                         <h6>Estampado con flecos</h6>
                         <h4 class="new-price">$10000</h4>
-                        <a href="" class="btn btn-primary">Agregar al carrito</a>
+                        <a href="javascript:void(0);" class="btn btn-primary" onclick="agregarAlCarrito('Bufanda Nube', 10000); actualizarContadorCarrito()">Agregar al carrito</a>
+
                     </div>
                 </div>
             </div>
@@ -175,13 +187,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
 
 </body>
 <footer>
     <div class="footer-content">
         <div class="contact">
             <p>ESCRIBINOS</p>
-            <a href="pages/escribinos.html">
+            <a href="../pages/escribinos.html">
                 <img src="../imagenes/img sobre.png" alt="Escribinos" class="contact-icon">
             </a>
         </div>

@@ -39,55 +39,96 @@
                                 </li>
                                 <nav class="navbar bg-body-tertiary">
                                     <div class="container">
-                                        <a class="navbar-brand" href="./carrito.html">
-                                            <img src="../imagenes/carritopng.png" alt="carrito" width="30" height="30">
-                                        </a>
+                                      <a class="navbar-brand" href="./carrito.html">
+                                        <img src="../imagenes/carritopng.png" alt="carrito" width="30" height="30">
+                                      </a>
                                     </div>
-                                </nav>
+                                  </nav>
 
                             </ul>
                         </div>
                 </div>
-
             </nav>
         </div>
 
     </header>
+
+
     <main>
         <section>
-            <div>
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="../imagenes/pañuelos/pañuelo seda estamapado lunares.jpg"
-                                class="img-fluid rounded-start" alt="pañueloestampadolunares">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Pañuelo de seda estampado</h5>
-                                <p class="card-text">Pañuelo de seda cuadrado con diseño</p>
-                                <button class="btn btn-primary" type="button">Comprar Ahora</button>
-                                <button class="btn btn-primary" type="button">Agregar al Carrito</button>
-                                <p class="card-text"><small class="text-body-secondary">* Composición: 100%
-                                        poliester</small></p>
-                                <p class="card-text"><small class="text-body-secondary">* Medidas: 50x50 cm.</small></p>
-                                <div class="d-grid gap-2 d-md-block">
+            <h1>Finalizar Compra</h1>
 
-                                </div>
-
-                            </div>
-                        </div>
+            <!-- Resumen de los productos -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Resumen de la compra</h5>
+                    <div id="productos-resumen">
+                        <!-- Aquí se mostrarán los productos seleccionados -->
                     </div>
                 </div>
             </div>
+
+            <!-- Formulario de datos de compra -->
+            <form id="formulario-compra">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="direccion" class="form-label">Dirección de Envío</label>
+                    <input type="text" class="form-control" id="direccion" required>
+                </div>
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" id="telefono" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="metodoPago" class="form-label">Método de Pago</label>
+                    <select class="form-select" id="metodoPago" required>
+                        <option value="tarjeta">Tarjeta de Crédito</option>
+                        <option value="mercadoPago">Mercado Pago</option>
+                        <option value="transferencia">Transferencia Bancaria</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Confirmar Compra</button>
+            </form>
         </section>
-
-
-
-
-
     </main>
 
+    <script src="../js/script.js"></script>
+
+    <script>
+        // Función para cargar los productos en el resumen
+        document.addEventListener("DOMContentLoaded", function() {
+            let carrito = JSON.parse(localStorage.getItem("carrito"));
+            let productosResumen = document.getElementById("productos-resumen");
+
+            // Si hay productos en el carrito, los mostramos
+            if (carrito && carrito.length > 0) {
+                carrito.forEach((producto) => {
+                    let productoDiv = document.createElement("div");
+                    productoDiv.classList.add("card", "mb-3");
+
+                    productoDiv.innerHTML = `
+                        <div class="card-body">
+                            <h5 class="card-title">${producto.nombre}</h5>
+                            <p class="card-text">Cantidad: ${producto.cantidad}</p>
+                            <p class="card-text">Precio por producto: $${producto.precio}</p>
+                            <p class="card-text">Total: $${producto.precio * producto.cantidad}</p>
+                        </div>
+                    `;
+
+                    productosResumen.appendChild(productoDiv);
+                });
+            }
+        });
+    </script>
+
+   
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
@@ -125,3 +166,7 @@
 
 
 </html>
+
+
+
+
